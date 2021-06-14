@@ -40,15 +40,14 @@ public class PlayerController : MonoBehaviour
 
         }
         
-        /*
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetMouseButtonDown(1))
         {
-            transform.localScale = new Vector2(0.5f, 0.3f);
+            transform.localScale = new Vector2(1.7f, 1.2f);
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.DownArrow)|| Input.GetMouseButtonUp(1))
         {
-            transform.localScale = new Vector2(0.5f, 0.5f);
-        }  */
+            transform.localScale = new Vector2(1.7f, 1.7f);
+        }  
     }
 
 }
