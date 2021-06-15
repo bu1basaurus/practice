@@ -5,17 +5,27 @@ using UnityEngine;
 public class SpawnObjects : MonoBehaviour
 {
     public GameObject[] objects;
+    public Transform GenerationPoint;
+    public int DBmin;
+    public int DBmax;
 
     void Start()
     {
-       // int rand = Random.Range(0, objects.Length);
+        // int rand = Random.Range(0, objects.Length);
         // Instantiate(objects[rand], objects[rand].transform.position, objects[rand].transform.rotation);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         int rand = Random.Range(0, objects.Length);
-        Instantiate(objects[rand], objects[rand].transform.position, objects[rand].transform.rotation);
+        int DistanceBetween = Random.Range(DBmin, DBmax);
+        if (transform.position.x < GenerationPoint.position.x)
+        {
+            transform.position = new Vector3(transform.position.x + DistanceBetween, objects[rand].transform.position.y, transform.position.z);
+            Instantiate(objects[rand], transform.position, objects[rand].transform.rotation);
+        }
+        
     }
 }

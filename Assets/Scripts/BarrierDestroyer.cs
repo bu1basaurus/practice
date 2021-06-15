@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundDestroyer : MonoBehaviour
+public class BarrierDestroyer : MonoBehaviour
 {
     public GameObject DestroyPoint;
 
 
     void Start()
     {
-        DestroyPoint = GameObject.Find("BGdestrPoint");
+        DestroyPoint = GameObject.Find("BRdestrPoint");
     }
 
 

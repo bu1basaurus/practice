@@ -9,7 +9,7 @@ public class PlatformDestroyer : MonoBehaviour
 
     void Start()
     {
-        DestroyPoint = GameObject.Find("PFdestrPoint");
+       DestroyPoint = GameObject.Find("PFdestrPoint");
     }
   
 
