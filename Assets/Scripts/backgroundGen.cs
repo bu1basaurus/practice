@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class backgroundGen : MonoBehaviour
+public class BackgroundGen : MonoBehaviour
 {
 
     public GameObject Background;

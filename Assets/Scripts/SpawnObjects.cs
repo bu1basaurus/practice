@@ -9,12 +9,7 @@ public class SpawnObjects : MonoBehaviour
     public int DBmin;
     public int DBmax;
 
-    void Start()
-    {
-        // int rand = Random.Range(0, objects.Length);
-        // Instantiate(objects[rand], objects[rand].transform.position, objects[rand].transform.rotation);
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -23,9 +18,8 @@ public class SpawnObjects : MonoBehaviour
         int DistanceBetween = Random.Range(DBmin, DBmax);
         if (transform.position.x < GenerationPoint.position.x)
         {
-            transform.position = new Vector3(transform.position.x + DistanceBetween, objects[rand].transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + DistanceBetween, objects[rand].transform.position.y, objects[rand].transform.position.z);
             Instantiate(objects[rand], transform.position, objects[rand].transform.rotation);
         }
-        
     }
 }

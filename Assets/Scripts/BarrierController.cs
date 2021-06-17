@@ -7,14 +7,11 @@ public class BarrierController : MonoBehaviour
     public float Movespeed;
     bool MovingUp = true;
 
-    void Start()
-    {
-        
-    }
+
 
     void Update()
     {
-        if (transform.position.y > 2.5f)
+        if (transform.position.y > 3f)
         {
             MovingUp = false;
         }
