@@ -12,16 +12,16 @@ public class Restart : MonoBehaviour
 
     void Start()
     {
-        scoreT.text = "¬аш счеfт: "  + Score.ScoreCount.ToString();
+        scoreT.text = "¬аш счЄт: "  + Score.ScoreCount.ToString();
         
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
  
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
     }
 }
