@@ -13,13 +13,13 @@ public class Score : MonoBehaviour
     void Start()
     {
         ScoreCounter = GetComponent<Text>();
-        ScoreCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PlayerController.Alive == true)
         ScoreCount+=1;
-        ScoreCounter.text = (ScoreCount/100).ToString();
+        ScoreCounter.text = ScoreCount.ToString();
     }
 }
